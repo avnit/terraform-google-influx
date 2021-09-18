@@ -10,13 +10,18 @@
 
 | Name | Version |
 |------|---------|
+| <a name="provider_google"></a> [google](#provider\_google) | ~> 2.7.0 |
 | <a name="provider_template"></a> [template](#provider\_template) | n/a |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_base_gcr"></a> [base\_gcr](#module\_base\_gcr) | terraform-google-modules/cloud-dns/google | ~> 3.1 |
+| <a name="module_base_pkg_dev"></a> [base\_pkg\_dev](#module\_base\_pkg\_dev) | terraform-google-modules/cloud-dns/google | ~> 3.1 |
 | <a name="module_external_firewall"></a> [external\_firewall](#module\_external\_firewall) | ./modules/external-firewall | n/a |
+| <a name="module_peering_zone"></a> [peering\_zone](#module\_peering\_zone) | terraform-google-modules/cloud-dns/google | ~> 3.1 |
+| <a name="module_private_googleapis"></a> [private\_googleapis](#module\_private\_googleapis) | terraform-google-modules/cloud-dns/google | ~> 3.1 |
 | <a name="module_service_account"></a> [service\_account](#module\_service\_account) | ./modules/tick-service-account | n/a |
 | <a name="module_tick_oss"></a> [tick\_oss](#module\_tick\_oss) | ./modules/tick-instance-group | n/a |
 
@@ -24,6 +29,19 @@
 
 | Name | Type |
 |------|------|
+| [google_compute_firewall.allow_all_egress](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_compute_firewall.allow_all_ingress](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_compute_firewall.allow_iap_rdp](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_compute_firewall.allow_iap_ssh](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_compute_firewall.allow_lb](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_compute_firewall.allow_private_api_egress](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_compute_firewall.allow_windows_activation](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_compute_firewall.deny_all_egress](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_dns_policy.default_policy](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dns_policy) | resource |
+| [google_active_folder.common](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/active_folder) | data source |
+| [google_compute_network.automate_vpc](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/compute_network) | data source |
+| [google_compute_network.vpc_dns_hub](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/compute_network) | data source |
+| [google_projects.dns_hub](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/projects) | data source |
 | [template_file.startup_script](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) | data source |
 
 ## Inputs
